@@ -1,15 +1,26 @@
-body { 
-  color: #575c7a;
+body {   
+  min-height: 400px;
+  margin-bottom: 100px;
+  clear: both;
+  top: 0; 
+  bottom: 0;
+  z-index: 1000; 
+  overflow-y: scroll; 
+/*   background-color: #99e265; */
+  background: url(../img/bgImage.jpg);
+  background-repeat: repeat;
+/*   overflow: hidden!important; */
+  color: #000;
   line-height 1.5em;
   font-family: Arial;
   font-size: 14px;  
-  background-color: black;   
+/*   background-color: rgb(93, 169, 91);    */
 }
 .promo_container{
-  margin: 10px 5px 10px 5px;
+  margin: 5px 5px 10px 5px;
   border-width:1px;
   border-style: solid;
-  border-color: #006600;
+  border-color: #000;
   border-radius: 12px;
 }
 .row {
@@ -17,10 +28,14 @@ body {
   margin-left: -15px;
 }
 .page{
+  overflow: hidden!important;
   max-width: 980px;
-  margin: 0px auto 0px auto;
+  margin: 60px auto 0px auto;
   position: relative;
-  background-color: #000;
+  background-color: #232532;
+/*   background: url(../img/bgImage.jpg); */
+  border: 2px solid;
+  border-radius: 12px;
 }
 article p{
   word-break:break-all;
@@ -28,7 +43,7 @@ article p{
 h1{
   font-size: 2em;
   font-weight: normal;
-  color: #a6430a;
+  color: #fff;
   margin: 0 0 .5em 0;
 }
 h2{
@@ -49,14 +64,14 @@ a:hover{
  color: #009eff; 
 }
 footer{
-  position: absolute;
+  position: fixed; bottom;
   right: 0;
   left: 0;
-/*   bottom: 0; */
-  text-align: center;
+  bottom: 0;
+  text-align: right;
   font-size: .85em;
-  color: #000;
-  background-color: #808080;
+  color: #fff;
+  background-color: #2f3535;
   padding: 10px 10px 10px 10px;
 }
 a.cta{
@@ -85,6 +100,7 @@ a.cta:hover{
   background-repeat: no-repeat;  
 }
 .promo.one{
+/*   background-color: #a5f95c; */
 /*   background-image: url(../img/promo1.png);  */
 }
 .promo.two{
@@ -94,13 +110,14 @@ a.cta:hover{
 /*   background-image: url(../img/promo3.png);  */
 }
 .container-fluid{
-  background-color: black;
+     background-color: #2f3535;
 }
 .nav{
-  background-color: black;
+/*   background-color: green; */
 }
 .navbar a{
-  color: #f5a06e;
+  color: #fff !important;
+/*   background-color: green; */
 /*   text-transform: uppercase; */
   text-decoration: none;
   display: inline-block;
@@ -108,8 +125,11 @@ a.cta:hover{
   font-size: .9em;
 }
 .navbar a:hover{
-  color: green !important;
+  color: #99e265 !important;
 /*   color: #fff; */
+}
+.navbar-brand{
+
 }
 .clear-fix{
   clear:both;
@@ -117,6 +137,7 @@ a.cta:hover{
 }
 
 #slides_control > div{
+  overflow: hidden!important;
   height: auto;
   width: auto;
   border-radius: 12px;
@@ -128,6 +149,7 @@ img{
   border-radius: 12px;
 }
 #slides_control {  
+  overflow: hidden!important; 
   border-radius: 12px;
 /*   position:absolute;  */
   width: auto;

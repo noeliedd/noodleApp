@@ -1,101 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
-    <base href="/">
-    <title>E-Moo's Noodles</title>
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-    <meta name="description" content="">
-    <meta name="E-Moo's Noodles" content="">
-    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/screen_layout_large.css" />
-    <link rel="stylesheet" type="text/css" media="only screen and (min-width:50px) and (max-width:500px)"   href="css/screen_layout_small.css">
-    <link rel="stylesheet" type="text/css" media="only screen and (min-width:501px) and (max-width:800px)"  href="css/screen_layout_medium.css">
-    <script  src="libs/angular/angular.min.js"></script>
-    <script  src="libs/angular-route/angular-route.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
-    <script  src="libs/jquery/dist/jquery.min.js"></script>
-    <script  src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!--[if lt IE 9]>
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+  <base href="/">
+  <title>Health Express</title>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <meta name="description" content="">
+  <meta name="Health Express" content="">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
+
+
+  <link rel="stylesheet" type="text/css" href="css/screen_layout_large.css" />
+  <link rel="stylesheet" type="text/css" media="only screen and (min-width:50px) and (max-width:500px)"   href="css/screen_layout_small.css">
+  <link rel="stylesheet" type="text/css" media="only screen and (min-width:501px) and (max-width:800px)"  href="css/screen_layout_medium.css">
+  <script  src="libs/angular/angular.min.js"></script>
+  <script  src="libs/angular-route/angular-route.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+  <script  src="libs/jquery/dist/jquery.min.js"></script>
+  <script  src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css"> <!-- has to be after bootstrap-->
+  <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-    <!--     <link rel="icon" type="image/png" href="images/favicon.png"> -->    
+  <!--     <link rel="icon" type="image/png" href="images/favicon.png"> -->    
 
-    <!-- JS -->
+  <!-- JS -->
 
 
-    <!-- ANGULAR CUSTOM -->
-    <script src="js/controllers/MainCtrl.js"></script>
-    <script src="js/controllers/NerdCtrl.js"></script>
-    <script src="js/services/NerdService.js"></script>
-    <script src="js/services/GeekService.js"></script>
-    <script src="js/appRoutes.js"></script>
-    <script src="js/app.js"></script>
-
-  </head>
-  <body style="background-color:black;" ng-app="sampleApp">
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="navbar navbar-default" role="navigation">
-          <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Find Us</a></li>
-                <li><a href="#">Menu</a></li>  
-                <li><a href="#">Contact Us</a></li>                  
-              </ul>
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
-        </nav>
-      </div><!-- row -->
-    </div><!-- end container -->
-
-    <div class='page'>
-      <header>
-        <a class='logo' href='#'></a>
-      </header>
-      <div class='promo_container'>
-        <div class='promo one'>
-          <div class='content'>
-            <div ng-controller="CarouselDemoCtrl" id="slides_control">
-              <carousel interval="myInterval">
-                <slide ng-repeat="slide in slides" active="slide.active">
-                  <img ng-src="{{slide.image}}">
-                  <div class="carousel-caption">
-                    <h3>{{desc[$index]}}</h3>
-                  </div>
-                </slide>
-              </carousel>
-            </div>     
+  <!-- ANGULAR CUSTOM -->
+  <script src="js/controllers/MainCtrl.js"></script>
+  <script src="js/controllers/AboutCtrl.js"></script>
+  <script src="js/services/NerdService.js"></script>
+  <script src="js/services/GeekService.js"></script>
+  <script src="js/appRoutes.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    $(document).on('click',function(){
+    $('.collapse').collapse('hide');
+    })
+  </script> 
+</head>
+<body ng-app="sampleApp">
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
           </div>
-        </div>
-        <div class='promo two'>
-          <div class='content'>
-                <img class="object-fit_fill" src="../img/address.png">
-          </div>            
-        </div>
-        <div class='clear-fix'>
-        </div>
-      </div>
-    </div>
-    <footer class ='footer'>
-      &copy; E-Moo's Noodles
-    </footer>    
-    <!--     <script src="js/jquery-2.1.3.min.js"></script>
-<script src="js/functions.js"></script> -->
-  </body>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="/">Health Express</a></li>              
+              <li><a href="/about">How It Works!</a></li>
+              <li><a href="#">Menu</a></li>  
+              <li><a href="/contact">Order Now</a></li>  
+            </ul>
+          </div><!-- /.navbar-collapse -->
+
+        </div><!-- /.container-fluid -->
+      </nav>
+    </div><!-- row -->
+  </div><!-- end container -->
+  
+  <div class='page'>
+    <header>
+      <a class='logo' href='#'></a>
+    </header>
+    <div ng-view></div>
+  </div>
+  </div>
+  <footer class ='footer'>
+    <a class="fb-like" data-href="https://www.facebook.com/TheHealthExpress" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false" data-colorscheme="dark"></a>
+    <a class="fb-follow" data-href="https://www.facebook.com/TheHealthExpress" data-layout="button_count" data-size="large" data-show-faces="false" data-colorscheme="dark"></a>
+    &copy; Health Express
+  </footer>    
+  <div id="fb-root"></div>
+
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=550822151719134";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script> 
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/functions.js"></script> 
+</body>
 </html>
